@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import main from './main.js';
+import App from './components/prod/Prod';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,5 +12,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-main();
+
+
 
