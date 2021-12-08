@@ -3,7 +3,7 @@ import Container from "../container/container";
 import Title from "../title/title";
 import CardGuestLoves from "../card/cardGuestLoves";
 
-import "../prod/App.css";
+import "../application/application.css";
 
 export default function SectionGuestLoves() {
   return (
