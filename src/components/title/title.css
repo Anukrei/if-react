@@ -1,0 +1,19 @@
+.guests-loves__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 106px;
+  padding-top: 120px;
+}
+.guests-loves__header h2 {
+  color: #383838;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 46.88px;
+  color: #383838;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  list-style: none;
+}
