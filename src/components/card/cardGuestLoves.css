@@ -10,6 +10,7 @@
   overflow: hidden;
   width: 25%;
 }
+
 .guests-loves__dsc-wrapper {
   display: flex;
   flex-direction: column;
@@ -21,55 +22,69 @@
   object-fit: cover;
   object-position: center;
 }
+
 .guests-loves__dsc-wrapper span {
   font-size: 24px;
 }
+
 .guests-loves__dsc {
   padding: 24px 0;
   color: #3077c6;
 }
+
 .guests-loves__dsc-city {
   color: #bfbfbf;
 }
+
 .guest-loves {
   padding: 120px 0;
 }
+
 .guest-loves__slider-wrapper {
   position: relative;
 }
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
 }
+
 .swiper-button-prev {
   transform: rotate(0.5turn);
 }
+
 .swiper-button-next,
 .swiper-button-prev {
-  background-image: url(arrow.svg);
+  background-image: url(../../img/arrow.svg);
   top: 28% !important;
   width: 50px !important;
 }
+
 .swiper-button-next {
   right: -4px !important;
 }
+
 .swiper-button-prev {
   left: -4px !important;
 }
+
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   display: none;
 }
+
 .guest-loves__swiper-container {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
+
 .guest-loves__swiper-wrapper {
   display: flex;
   width: 100%;
   height: 100%;
 }
+
 .guests-loves__swiper-slide {
   flex-shrink: 0;
   margin-bottom: 120px;

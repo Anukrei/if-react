@@ -1,15 +1,41 @@
 @import "https://unpkg.com/swiper/swiper-bundle.min.css";
-@import "./components/container/container.css";
-@import "./components/title/title.css";
-@import "./components/card/cardGuestLoves.css";
+@import "./components/Section/SectionGrey.css";
+@import "./components/Container/container.css";
+@import "./components/Title/title.css";
+@import "./components/Card/cardGuestLoves.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
-  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333333;
+  font-size: 12px;
+}
+.not-date {
+  margin: 0 auto;
+  font-size: 4rem;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
 }
