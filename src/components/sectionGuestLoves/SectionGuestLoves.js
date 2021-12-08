@@ -4,7 +4,7 @@ import Container from "../container/Container";
 import Title from "../title/Title";
 import CardGuestLoves from "../card/CardGuestLoves";
 
-import "../prod/App.css";
+import "../application/application";
 
 export default function SectionGuestLoves() {
   return (
