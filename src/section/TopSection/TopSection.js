@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import Container from '../../components/Container/Container';
 import Section from '../../components/Section/Section';
 import Title from '../../components/Title/Title';
-import CardGuestLoves from '../../components/Card/CardGuestLoves';
+import Card from '../../components/Card/Card';
+import getData from '../../helpers/getData';
 
 import './TopSection.css';
 
-import dataHotels from '../../variables/dataHotels';
+import BASE_API_URL from '../../variables/urls';
 
-import log from './logoBig.svg';
-import acc from './sprite.svg';
-import googlePay from './google-play-badge.svg';
-import appStore from './downloadAppStore.svg';
+import log from './img/logoBig.svg';
+import acc from './img/sprite.svg';
+import googlePay from './img/google-play-badge.svg';
+import appStore from './img/downloadAppStore.svg';
 
 export default class TopSection extends Component {
 	constructor(props) {
@@ -27,21 +28,26 @@ export default class TopSection extends Component {
 		this.setState({ searchText: event.target.value });
 	}
 
-	handleSearchResult = (event) => {
+	handleSearchResult = async (event) => {
 		event.preventDefault();
 		const { searchText, count } = this.state;
+		const text = new RegExp(`.*${searchText}+.*`, 'gim');
+		const result = [];
+		const dataHotels = await getData({ url: BASE_API_URL, text: searchText });
+
 		if (searchText.length === 0) {
 			alert('Enter search data, please');
 			return;
 		}
-		const text = new RegExp(`.*${searchText}+.*`, 'gim');
-		const result = [];
+
 		dataHotels.forEach((currentValue) => {
 			const tempValue = currentValue.country + currentValue.city + currentValue.name;
+
 			if (!(tempValue.search(text))) {
 				result.push(currentValue);
 			}
 		});
+
 		this.setState({ searchResult: result });
 		this.setState({ count: count + 1 });
 	}
@@ -119,7 +125,7 @@ export default class TopSection extends Component {
 					{ header }
 					<Section>
 						<Container>
-							<Title text="Availeble Hotels" />
+							<Title text="Available Hotels" className="guests-loves__header" />
 							<div className="not-date">Not valid data for search, repeat please</div>
 						</Container>
 					</Section>
@@ -131,8 +137,8 @@ export default class TopSection extends Component {
 					{ header }
 					<Section>
 						<Container>
-							<Title text="Availeble Hotels" />
-							<CardGuestLoves dataSearch={searchResult} />
+							<Title text="Available Hotels" className="guests-loves__header" />
+							<Card dataSearch={searchResult} />
 						</Container>
 					</Section>
 				</>
